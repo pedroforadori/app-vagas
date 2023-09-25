@@ -34,7 +34,7 @@ body {
   }
 
   .header{
-    background: url(public/assets/img/header.png) center center no-repeat;
+    background: url(../assets/img/header.png) center center no-repeat;
     background-size: cover;
     padding: 30px 36px;
   }
@@ -64,7 +64,7 @@ body {
   }
 
   .header {
-    background: url(public/assets/img/header.png) center right no-repeat;
+    background: url(../assets/img/header.png) center right no-repeat;
     background-size: cover;
     height: 187px;
     padding: 23px 36px;
