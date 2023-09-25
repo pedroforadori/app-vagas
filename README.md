@@ -1,7 +1,8 @@
-# React + Vite
 # app-vagas
 
-Olá, para executar este projeto em ambiente local:
+Diferente da entrevista optei por usar o Vite para criaçao de um novo projeto.
+
+Para executar em ambiente local:
 
 - clone este repositorio
 - execute npm install
