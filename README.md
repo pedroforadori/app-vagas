@@ -8,4 +8,6 @@ Para executar em ambiente local:
 - execute npm install
 - e depois, para rodar, npm run dev
 
-Voce tambem pode executar testes rodando o comando npm run test
+Voce tambem pode executar testes rodando o comando npm run test.
+
+E tambem acessar por aqui: https://app-vagas.vercel.app/
