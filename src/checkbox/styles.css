@@ -2,59 +2,7 @@
    display: flex;
    align-items: center;
    gap: 10px;
-  /*position: relative;
-  margin-bottom: 15px;
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: 400; */
-  /* -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;*/
 } 
-
-/* input[type="checkbox"] {
-    appearance: none;  
-    height: 24px;
-    width: 24px;
-    left: 0px;
-    top: 0px;
-    background: #2F3676;
-    
-    border-radius: 2px;
-} */
-
-/* .container checkbox {
-  background-color: #2F3676;
-} */
-
-/* .checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 24px;
-    width: 24px;
-    background-color: #2F3676;
-    border-radius: 4px;
-  } */
-
-  /* .checkmark div {
-    padding: 5px 0 0 30px;
-  } */
-  
-  /* .container:hover input ~ .checkmark {
-    background-color: #191847;
-  } */
-  
-  /* .checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-  } */
-  
-  /* .container input:checked ~ .checkmark:after {
-    display: block;
-  } */
   
   input[type="checkbox"] {
     -webkit-appearance: none;
