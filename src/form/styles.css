@@ -1,6 +1,7 @@
 .counter {
     display: flex;
     align-items: start;
+    min-height: 44px;
 }
  
 .counter input {
@@ -37,4 +38,5 @@
 
 .counter button{
   border: none;
+  height: 38px;
 }
