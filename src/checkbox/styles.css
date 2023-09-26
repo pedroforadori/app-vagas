@@ -1,25 +1,34 @@
 .container {
-  display: block;
-  position: relative;
+   display: flex;
+   align-items: center;
+   gap: 10px;
+  /*position: relative;
   margin-bottom: 15px;
   cursor: pointer;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 400; */
   /* -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;*/
 } 
 
-.container input {
-  position: absolute;
+/* input[type="checkbox"] {
+    appearance: none;  
     height: 24px;
     width: 24px;
     left: 0px;
     top: 0px;
-}
+    background: #2F3676;
+    
+    border-radius: 2px;
+} */
 
-.checkmark {
+/* .container checkbox {
+  background-color: #2F3676;
+} */
+
+/* .checkmark {
     position: absolute;
     top: 0;
     left: 0;
@@ -27,35 +36,68 @@
     width: 24px;
     background-color: #2F3676;
     border-radius: 4px;
-  }
+  } */
 
-  .checkmark div {
+  /* .checkmark div {
     padding: 5px 0 0 30px;
-  }
+  } */
   
-  .container:hover input ~ .checkmark {
+  /* .container:hover input ~ .checkmark {
     background-color: #191847;
-  }
+  } */
   
-  .checkmark:after {
+  /* .checkmark:after {
     content: "";
     position: absolute;
     display: none;
-  }
+  } */
   
-  .container input:checked ~ .checkmark:after {
+  /* .container input:checked ~ .checkmark:after {
     display: block;
+  } */
+  
+  input[type="checkbox"] {
+    -webkit-appearance: none;
+
+    appearance: none;
+   
+    background-color: #2F3676;
+    margin: 0;
+  
+    font: inherit;
+    color: currentColor;
+    width: 24px;
+    height: 24px;
+    border: 0.15em solid #2F3676;
+    border-radius: 0.15em;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
   }
   
-  /* Style the checkmark/indicator */
-  .container .checkmark:after {
-    left: 9px;
-    top: 5px;
-    width: 5px;
-    height: 10px;
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
+  input[type="checkbox"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+    transform: scale(0);
+    transform-origin: bottom left;
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em #fff;
+    /* Windows High Contrast Mode */
+    background-color: #fff;
   }
+  
+  input[type="checkbox"]:checked::before {
+    transform: scale(1);
+  }
+  
+  input[type="checkbox"]:focus {
+    outline: max(2px, 0.15em) solid #2F3676;
+    outline-offset: max(2px, 0.15em);
+  }
+
+  .container span {
+    background-color: transparent !important;
+  }
+  

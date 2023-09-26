@@ -3,7 +3,7 @@ import "./styles.css"
 
 export default function Checkbox({id, text, value, onChange, style, focus}){
     return(
-        <label className="container" >
+        <label className="container">
             <input
                 id={id} 
                 type="checkbox" 
@@ -12,9 +12,7 @@ export default function Checkbox({id, text, value, onChange, style, focus}){
                 style={style}
                 ref={focus}
             />   
-            <div className="checkmark" style={style}>
-                <div>{text}</div>
-            </div>
+            <span style={style}>{text}</span>
         </label>
     )
 }

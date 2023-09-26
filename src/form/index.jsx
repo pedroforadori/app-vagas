@@ -110,7 +110,7 @@ export default function Form(){
                     text="React" 
                     value={react}
                     onChange={() => action("React")}    
-                    style={errorCheckbox ? {backgroundColor: "#F59393", color: "#F33232"} : undefined}
+                    style={errorCheckbox ? {backgroundColor: "#F59393", borderColor: "#F59393", color: "#F33232"} : undefined}
                     focus={inputRef}
 
                 />
@@ -119,14 +119,14 @@ export default function Form(){
                     text="Vue" 
                     value={vue}
                     onChange={() => action("Vue")} 
-                    style={errorCheckbox ? {backgroundColor: "#F59393", color: "#F33232"} : undefined}
+                    style={errorCheckbox ? {backgroundColor: "#F59393", borderColor: "#F59393", color: "#F33232"} : undefined}
                 />
                  <Checkbox 
                     id="Angular"
                     text="Angular" 
                     value={angular}
                     onChange={() => action("Angular")}
-                    style={errorCheckbox ? {backgroundColor: "#F59393", color: "#F33232"} : undefined}
+                    style={errorCheckbox ? {backgroundColor: "#F59393", borderColor: "#F59393", color: "#F33232"} : undefined}
                 />
              </fieldset>
                     

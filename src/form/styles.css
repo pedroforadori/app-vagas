@@ -40,3 +40,9 @@
   border: none;
   height: 41px;
 }
+
+.counter button:focus, 
+textarea:focus {
+  outline: max(2px, 0.15em) solid #2F3676;
+  outline-offset: max(2px, 0.15em);
+}
