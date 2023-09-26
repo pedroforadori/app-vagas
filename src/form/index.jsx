@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import Swal from 'sweetalert2'
 import Checkbox from "../checkbox"
 import Button from "../button"
@@ -14,6 +14,11 @@ export default function Form(){
     const [ valueSticker, setValueSticker ] = useState(0);
     const [ obs, setObs ] = useState("");
     const [ errorCheckbox, setErrorCheckbox ] = useState(false)
+    const inputRef = useRef(null);
+
+    useEffect(() => {
+        inputRef.current.focus();
+    }, []);
 
     function handlePlus(){
         setValueSticker(valueSticker + 1);
@@ -87,8 +92,8 @@ export default function Form(){
             cancelButton: 'Cancelar',
             dangerMode: true,
             confirmButtonColor: "#2f3676",
-          }).then((isConfirm) => {
-            if (isConfirm) {
+          }).then(({isConfirmed}) => {
+            if (isConfirmed) {
                 resetForm()
             }else{
                 return
@@ -106,6 +111,7 @@ export default function Form(){
                     value={react}
                     onChange={() => action("React")}    
                     style={errorCheckbox ? {backgroundColor: "#F59393", color: "#F33232"} : undefined}
+                    focus={inputRef}
 
                 />
                  <Checkbox 
@@ -127,12 +133,17 @@ export default function Form(){
              <fieldset className="fieldset">
                  <label className="label">Quantos stickers de cada?</label> 
                  <div className="counter" data-testid="counter">
-                    <img 
-                        data-testid="minus"
-                        src={valueSticker === 0 ? MinusDisable : Minus} 
-                        alt="Minus SVG" 
+                    <button 
+                        type="button"
                         onClick={valueSticker > 0 ? handleMinus : undefined}
-                    />
+                    >
+                        <img 
+                            data-testid="minus"
+                            src={valueSticker === 0 ? MinusDisable : Minus} 
+                            alt="imagem representando botao menos" 
+                            
+                        />
+                    </button>
                     <input 
                         data-testid="valueSticker"
                         type="number"
@@ -141,12 +152,18 @@ export default function Form(){
                         onChange={(e) => setValueSticker(e.target.value)}
                         value={valueSticker}
                     />
-                    <img 
-                        data-testid="plus"
-                        src={Plus} 
-                        alt="Plus SVG" 
+                    <button
+                        type="button"
                         onClick={handlePlus}
-                    />
+                    >
+                        <img 
+                            data-testid="plus"
+                            src={Plus} 
+                            alt="imagem representando botao mais" 
+                            
+                        />
+                    </button>
+                    
                 </div>
              </fieldset>
                     

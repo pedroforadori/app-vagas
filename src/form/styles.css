@@ -30,3 +30,11 @@
 .counter img {
     cursor: pointer;
 }
+
+.counter button:focus {
+  height: 44px;
+}
+
+.counter button{
+  border: none;
+}

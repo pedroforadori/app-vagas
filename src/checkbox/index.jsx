@@ -1,6 +1,7 @@
+import { useEffect } from "react"
 import "./styles.css"
 
-export default function Checkbox({id, text, value, onChange, style}){
+export default function Checkbox({id, text, value, onChange, style, focus}){
     return(
         <label className="container" >
             <input
@@ -9,6 +10,7 @@ export default function Checkbox({id, text, value, onChange, style}){
                 checked={value} 
                 onChange={onChange}
                 style={style}
+                ref={focus}
             />   
             <div className="checkmark" style={style}>
                 <div>{text}</div>

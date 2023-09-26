@@ -6,19 +6,18 @@
   cursor: pointer;
   font-size: 14px;
   font-weight: 400;
-  -webkit-user-select: none;
+  /* -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none;
-}
+  user-select: none;*/
+} 
 
-/* Hide the browser's default checkbox */
 .container input {
   position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
+    height: 24px;
+    width: 24px;
+    left: 0px;
+    top: 0px;
 }
 
 .checkmark {
@@ -35,19 +34,16 @@
     padding: 5px 0 0 30px;
   }
   
-  /* On mouse-over, add a grey background color */
   .container:hover input ~ .checkmark {
     background-color: #191847;
   }
   
-  /* Create the checkmark/indicator (hidden when not checked) */
   .checkmark:after {
     content: "";
     position: absolute;
     display: none;
   }
   
-  /* Show the checkmark when checked */
   .container input:checked ~ .checkmark:after {
     display: block;
   }

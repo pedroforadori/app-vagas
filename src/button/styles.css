@@ -1,5 +1,5 @@
 
-button {
+.submitForm {
     appearance: none;
     background: #2f3676;
     border: 0;
@@ -14,13 +14,13 @@ button {
     cursor: pointer;
   }
   
-button:focus,
-button:hover {
+.submitForm:focus,
+.submitForm:hover {
     border: 2px solid #2f3676;
     background: #191847;
 }
 
-button:disabled{
+.submitForm:disabled{
   border: 2px solid #555;
   background: #C5CFD6;
   color: #555;
