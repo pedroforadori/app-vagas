@@ -1,5 +1,6 @@
 import Form from "./components/form"
 import "./global.css"
+import "./app.css"
 
 export default function App(){
     return(

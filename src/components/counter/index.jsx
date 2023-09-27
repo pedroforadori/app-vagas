@@ -1,6 +1,7 @@
 import Minus from "../../../public/assets/img/minus.svg"
 import MinusDisable from "../../../public/assets/img/minus-disabled.svg"
 import Plus from "../../../public/assets/img/plus.svg"
+import "./styles.css"
 
 export default function Counter({minus, plus, valueSticker}){
     return(

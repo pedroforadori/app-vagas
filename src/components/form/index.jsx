@@ -144,13 +144,13 @@ export default function Form(){
                 </textarea>
              </fieldset>
                     
-             <footer className="footer">
+             <fieldset className="footer">
                  <Button 
                     text="Enviar" 
                     type="submit"
                     disabled={valueSticker === 0 ? true : false}
                 />
-             </footer>  
+             </fieldset>  
         </form>
     )
 }

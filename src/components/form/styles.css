@@ -1,48 +1,34 @@
-.counter {
+@media screen and (max-width: 640px) {
+  .footer {
+    padding: 32px;
     display: flex;
-    align-items: start;
-    min-height: 44px;
+    justify-content: center;
+  }
+
 }
- 
-.counter input {
+
+@media screen and (min-width: 641px) { 
+  .footer {
+    padding: 32px;
     background: #dde3e9;
-    border: 1px solid #2f3676;
-    border-radius: 7px;
-    font-size: 20px;
-    font-weight: bold;
-    margin: 0 8px;
-    width: 60px;
-    padding: 9px;
-    text-align: center;
-    -webkit-appearance: none;
+    display: flex;
+    justify-content: flex-end;
+  }
 }
 
-.counter input::-webkit-outer-spin-button,
-.counter input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+.label {
+  font-size: 18px;
+  font-weight: 600;
 }
 
-/* Firefox */
-.counter input[type=number] {
-  -moz-appearance: textfield;
+.fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0 32px;
+  margin-bottom: 32px;
 }
 
-.counter img {
-    cursor: pointer;
-}
-
-.counter button:focus {
-  height: 44px;
-}
-
-.counter button{
+fieldset{
   border: none;
-  height: 41px;
-}
-
-.counter button:focus, 
-textarea:focus {
-  outline: max(2px, 0.15em) solid #2F3676;
-  outline-offset: max(2px, 0.15em);
 }
