@@ -2,9 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import Swal from 'sweetalert2'
 import Checkbox from "../checkbox"
 import Button from "../button"
-import Minus from "../../public/assets/img/minus.svg"
-import MinusDisable from "../../public/assets/img/minus-disabled.svg"
-import Plus from "../../public/assets/img/plus.svg"
+import Counter from "../counter";
 import "./styles.css"
 
 export default function Form(){
@@ -132,39 +130,7 @@ export default function Form(){
                     
              <fieldset className="fieldset">
                  <label className="label">Quantos stickers de cada?</label> 
-                 <div className="counter" data-testid="counter">
-                    <button 
-                        type="button"
-                        onClick={valueSticker > 0 ? handleMinus : undefined}
-                    >
-                        <img 
-                            data-testid="minus"
-                            src={valueSticker === 0 ? MinusDisable : Minus} 
-                            alt="imagem representando botao menos" 
-                            
-                        />
-                    </button>
-                    <input 
-                        data-testid="valueSticker"
-                        type="number"
-                        disabled={true} 
-                        placeholder="0" 
-                        onChange={(e) => setValueSticker(e.target.value)}
-                        value={valueSticker}
-                    />
-                    <button
-                        type="button"
-                        onClick={handlePlus}
-                    >
-                        <img 
-                            data-testid="plus"
-                            src={Plus} 
-                            alt="imagem representando botao mais" 
-                            
-                        />
-                    </button>
-                    
-                </div>
+                 <Counter minus={handleMinus} plus={handlePlus} valueSticker={valueSticker}/>
              </fieldset>
                     
              <fieldset className="fieldset">
