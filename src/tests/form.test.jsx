@@ -1,5 +1,5 @@
 import { fireEvent, getAllByRole, getByDisplayValue, getByTestId, getByText, render, screen } from "@testing-library/react"
-import Form from "../form"
+import Form from "../components/form"
 
 describe("form", () => {
     it("should render correctly", () => {
